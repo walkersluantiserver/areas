@@ -55,9 +55,12 @@ Self protection is disabled.=
 Self protection is enabled.=
 That area doesn't exist.=
 The player "@1" does not exist.=
+This area no longer disables PVP.=
+This area now disables PVP.=
 Toggle an area open (anyone can interact) or closed=
 Toggle an area open/closed for members in your faction.=
 Toggle whether an area counts towards the area count limit of its owner=
+Toggle whether an area disables PVP=
 You are an area administrator ("areas" privilege).=
 You can protect areas=
 You can't protect that area.=
@@ -82,6 +85,7 @@ Invalid usage, see /help @1.=
 
 ### hud.lua ###
 
+:no PVP=
 :open=
 Areas:=
 
@@ -100,6 +104,7 @@ Can protect more, bigger areas.=
 Area is too big.=
 
 [no limit]=
+[no PVP]=
 
 Self protection is disabled or you do not have the necessary privilege.=
 

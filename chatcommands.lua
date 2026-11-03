@@ -317,6 +317,29 @@ minetest.register_chatcommand("area_open", {
 })
 
 
+minetest.register_chatcommand("area_pvp", {
+	params = S("<ID>"),
+	description = S("Toggle whether an area disables PVP"),
+	func = function(name, param)
+		local id = tonumber(param)
+		if not id then
+			return false, S("Invalid usage, see /help @1.", "area_pvp")
+		end
+
+		if not areas:isAreaOwner(id, name) then
+			return false, S("Area @1 does not exist"
+					.." or is not owned by you.", id)
+		end
+		local no_pvp = not areas.areas[id].no_pvp
+		-- Save false as nil to avoid inflating the DB.
+		areas.areas[id].no_pvp = no_pvp or nil
+		areas:save()
+		return true, no_pvp and S("This area now disables PVP.") or
+			S("This area no longer disables PVP.")
+	end
+})
+
+
 minetest.register_chatcommand("area_no_limit", {
 	params = S("<ID>"),
 	description = S("Toggle whether an area counts towards the"

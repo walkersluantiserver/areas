@@ -111,6 +111,11 @@ Commands
 
   * `/area_open <ID>` -- Toggle open/closed the specified area for everyone.
 
+  * `/area_pvp <ID>` -- Toggle whether the specified area disables PVP. PVP is
+	enabled by default. Requires the same rights as removing the area. Players
+	can't hurt each other if either of them is in an area that disables PVP,
+	even if other areas at that position don't disable it.
+
   * `/area_no_limit <ID>` -- Toggle whether the specified area counts towards
 	the area count limit of its owner. (requires the `areas` privilege)
 	Areas that were created before this command existed still count.
