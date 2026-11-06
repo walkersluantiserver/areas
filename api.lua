@@ -193,6 +193,22 @@ function areas:canInteract(pos, name)
 	return not owned
 end
 
+-- Checks whether players may fight at the position. PVP is allowed by default.
+-- With overlapping areas, a single area with `no_pvp` set is enough to disable it,
+-- so that a sub-area can't re-enable PVP inside of a PVP-free parent area.
+function areas:isPvpAllowed(pos)
+	-- Same limits as the HUD, as AreaStore requires valid integer positions.
+	pos = vector.apply(vector.round(pos), function(p)
+		return math.max(math.min(p, 2147483), -2147483)
+	end)
+	for _, area in pairs(self:getAreasAtPos(pos)) do
+		if area.no_pvp then
+			return false
+		end
+	end
+	return true
+end
+
 -- Returns a table (list) of all players that own an area
 function areas:getNodeOwners(pos)
 	local owners = {}

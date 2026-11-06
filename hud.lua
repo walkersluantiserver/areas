@@ -42,9 +42,10 @@ minetest.register_globalstep(function(dtime)
 				end
 			end
 
-			table.insert(areaStrings, ("%s [%u] (%s%s%s)")
+			table.insert(areaStrings, ("%s [%u] (%s%s%s%s)")
 					:format(area.name, id, area.owner,
 					area.open and S(":open") or "",
+					area.no_pvp and S(":no PVP") or "",
 					faction_info and ": "..faction_info or ""))
 		end
 

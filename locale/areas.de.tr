@@ -55,9 +55,12 @@ Self protection is disabled.=Selbstschutz ist deaktiviert, Spieler können keine
 Self protection is enabled.=Selbstschutz ist aktiviert, Spieler können selbst Bereiche bestimmen.
 That area doesn't exist.=Dieser Bereich existiert nicht.
 The player "@1" does not exist.=Der Spieler „@1“ existiert nicht.
+This area no longer disables PVP.=Dieser Bereich deaktiviert PVP nicht mehr.
+This area now disables PVP.=Dieser Bereich deaktiviert nun PVP.
 Toggle an area open (anyone can interact) or closed=Schalte einen Bereich offen (jeder kann interagieren) oder geschlossen
 Toggle an area open/closed for members in your faction.=Schalte einen Bereich offen/geschlossen für Mitglieder deiner Fraktion.
 Toggle whether an area counts towards the area count limit of its owner=Schalte um, ob ein Bereich zum Bereichslimit seines Besitzers zählt
+Toggle whether an area disables PVP=Schalte um, ob ein Bereich PVP deaktiviert
 You are an area administrator ("areas" privilege).=Du bist ein Bereichsadministrator (Berechtigung „areas“).
 You can protect areas=Du kannst Bereiche schützen.
 You can't protect that area.=Du kannst diesen Bereich nicht schützen.
@@ -82,6 +85,7 @@ Invalid usage, see /help @1.=Ungültige Verwendung, siehe /help @1.
 
 ### hud.lua ###
 
+:no PVP=:kein PVP
 :open=:offen
 Areas:=Bereiche:
 
@@ -100,6 +104,7 @@ Can protect more, bigger areas.=Kann mehr, grössere Bereiche schützen.
 Area is too big.=Bereich ist zu gross.
 
 [no limit]=[kein Limit]
+[no PVP]=[kein PVP]
 
 Self protection is disabled or you do not have the necessary privilege.=Selbstschutz ist deaktiviert oder du hast nicht die erforderlichen Berechtigungen.
 

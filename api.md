@@ -47,6 +47,17 @@ Area count limit
      the limit, and the amount of areas that are exempt from it.
 
 
+PVP
+---
+
+* Areas with the field `no_pvp = true` disable PVP. The field is optional; PVP is
+  allowed in areas without it. It is toggled with `/area_pvp <ID>`.
+* `areas:isPvpAllowed(pos)`
+   * Returns `false` if any area at the position disables PVP, otherwise `true`.
+* A hit is blocked if this returns `false` for the victim or the attacker. All
+  `on_punchplayer` callbacks are skipped for blocked hits.
+
+
 HUD
 ---
 

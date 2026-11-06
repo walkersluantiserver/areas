@@ -338,6 +338,9 @@ function areas:toString(id)
 	if area.no_limit then
 		message = message.." "..S("[no limit]")
 	end
+	if area.no_pvp then
+		message = message.." "..S("[no PVP]")
+	end
 	return message
 end
 
